@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2632441FB58F768CB3DB4B89 /* Pods_GoodNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4D035593105E46A3023C0D /* Pods_GoodNews.framework */; };
+		573625E728EE265700212F9A /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573625E628EE265700212F9A /* URLRequest+Extensions.swift */; };
 		577E12D9289BDC9900C8D666 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E12D8289BDC9900C8D666 /* Webservice.swift */; };
 		577E12DC289BDE8900C8D666 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E12DB289BDE8900C8D666 /* Article.swift */; };
 		577E12DF289BE1D100C8D666 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E12DE289BE1D100C8D666 /* ArticleViewModel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		573625E628EE265700212F9A /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		577E12D8289BDC9900C8D666 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		577E12DB289BDE8900C8D666 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		577E12DE289BE1D100C8D666 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573625E528EE263800212F9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				573625E628EE265700212F9A /* URLRequest+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		577E12D7289BDC8B00C8D666 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		57A42F33289BD8A40052E8AD /* GoodNews */ = {
 			isa = PBXGroup;
 			children = (
+				573625E528EE263800212F9A /* Extensions */,
 				577E12E0289BE3D000C8D666 /* Cells */,
 				577E12DD289BE1C200C8D666 /* ViewModels */,
 				577E12DA289BDE7D00C8D666 /* Models */,
@@ -140,7 +151,6 @@
 				8DFBDDB20837B2318BB077EC /* Pods-GoodNews.debug.xcconfig */,
 				8C2ACCA05A52A00A5EB4D14A /* Pods-GoodNews.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -264,6 +274,7 @@
 				577E12D9289BDC9900C8D666 /* Webservice.swift in Sources */,
 				577E12DF289BE1D100C8D666 /* ArticleViewModel.swift in Sources */,
 				57A42F37289BD8A40052E8AD /* SceneDelegate.swift in Sources */,
+				573625E728EE265700212F9A /* URLRequest+Extensions.swift in Sources */,
 				577E12E2289BE3DA00C8D666 /* ArticleTableViewCell.swift in Sources */,
 				577E12DC289BDE8900C8D666 /* Article.swift in Sources */,
 			);
