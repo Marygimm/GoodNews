@@ -16,6 +16,11 @@ extension ArticleList {
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=cebc5a0f8fa34a869086e5b3e37f3db5") else { return nil }
         return Resource(url: url)
     }()
+    
+    static var empty: ArticleList = {
+        return ArticleList(articles: [Article(title: "", description: "")])
+    }()
+    
 }
 
 

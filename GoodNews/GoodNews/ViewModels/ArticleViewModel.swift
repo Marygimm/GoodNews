@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct ArticleListViewModel {
     let articles: [Article]
@@ -41,4 +43,15 @@ extension ArticleViewModel {
     var title: String { return self.article.title ?? "" }
     var description: String { return self.article.description ?? "" }
     
+}
+
+//with RXswift
+extension ArticleViewModel {
+    var titleRxSwift: Observable<String> {
+        return Observable<String>.just(article.title ?? "")
+    }
+    
+    var descriptionRxSwift: Observable<String> {
+        return Observable<String>.just(article.description ?? "")
+    }
 }

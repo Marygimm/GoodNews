@@ -72,7 +72,15 @@ class NewsListTableViewController: UITableViewController {
         let articleViewModel = self.articleListViewModel?.articleAtIndex(indexPath.row)
         cell.titleLabel.text = articleViewModel?.title
         cell.descriptionLabel.text = articleViewModel?.description
+        /* with rxSwift
+        articleViewModel?.titleRxSwift.asDriver(onErrorJustReturn: "")
+            .drive(cell.titleLabel.rx.text)
+            .disposed(by: disposeBag)
+        articleViewModel?.descriptionRxSwift.asDriver(onErrorJustReturn: "")
+            .drive(cell.descriptionLabel.rx.text)
+            .disposed(by: disposeBag)
         cell.selectionStyle = .none
+         */
         return cell
     }
     
