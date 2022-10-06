@@ -11,6 +11,13 @@ struct ArticleList: Decodable {
     let articles: [Article]
 }
 
+extension ArticleList {
+    static var all: Resource<ArticleList>? = {
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=cebc5a0f8fa34a869086e5b3e37f3db5") else { return nil }
+        return Resource(url: url)
+    }()
+}
+
 
 struct Article: Decodable {
     let title: String?

@@ -37,9 +37,8 @@ class NewsListTableViewController: UITableViewController {
     // call with rxSwift
     private func populateNews() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=cebc5a0f8fa34a869086e5b3e37f3db5") else { return }
+        guard let resource = ArticleList.all else { return }
         
-        let resource = Resource<ArticleList>(url: url)
         URLRequest.load(resource: resource).subscribe(onNext: { [weak self] articles in
             if let articles = articles {
                 DispatchQueue.main.async {
@@ -73,6 +72,7 @@ class NewsListTableViewController: UITableViewController {
         let articleViewModel = self.articleListViewModel?.articleAtIndex(indexPath.row)
         cell.titleLabel.text = articleViewModel?.title
         cell.descriptionLabel.text = articleViewModel?.description
+        cell.selectionStyle = .none
         return cell
     }
     
